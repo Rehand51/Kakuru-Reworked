@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}{{ title }} | KAKURU{% endblock %}
+{% block content %}
+<h1>{{ title }}</h1>
+<form class="calculator" method="post">
+    {% for section in sections %}
+    <section class="panel">
+        {% if !section.heading.is_empty() %}<h2>{{ section.heading }}</h2>{% endif %}
+        {% for field in section.fields %}
+        <label for="{{ field.name }}">{{ field.label }}</label>
+        <input id="{{ field.name }}" type="number" step="any" name="{{ field.name }}" value="{{ field.value }}" required>
+        {% endfor %}
+        {% for result in section.outputs %}
+        <p class="result">{{ result }}</p>
+        {% endfor %}
+        {% if !section.note.is_empty() %}<p class="note">{{ section.note }}</p>{% endif %}
+    </section>
+    {% endfor %}
+    <button type="submit">Hitung</button>
+</form>
+{% endblock %}

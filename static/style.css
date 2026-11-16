@@ -1,0 +1,129 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    color: #20252b;
+    background: #f5f7f8;
+    font: 16px/1.55 system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+.site-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem max(1.25rem, calc((100% - 70rem) / 2));
+    color: white;
+    background: #173a53;
+}
+
+.brand {
+    color: inherit;
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.navigation summary {
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.navigation nav {
+    position: absolute;
+    z-index: 1;
+    right: max(1.25rem, calc((100% - 70rem) / 2));
+    display: grid;
+    max-height: 75vh;
+    overflow-y: auto;
+    min-width: 17rem;
+    padding: 0.5rem;
+    border-radius: 0.4rem;
+    background: white;
+    box-shadow: 0 0.5rem 1.5rem #0003;
+}
+
+.navigation nav a {
+    padding: 0.45rem 0.6rem;
+    color: #20252b;
+    text-decoration: none;
+}
+
+.navigation nav a:hover,
+.navigation nav a[aria-current="page"] {
+    color: #fff;
+    background: #173a53;
+}
+
+main {
+    width: min(100% - 2rem, 70rem);
+    margin: 2rem auto;
+}
+
+h1 {
+    margin-bottom: 1.5rem;
+    color: #173a53;
+}
+
+.panel {
+    margin: 1rem 0;
+    padding: 1.25rem;
+    border-radius: 0.5rem;
+    background: white;
+    box-shadow: 0 1px 5px #1e334014;
+}
+
+.panel h2 {
+    margin-top: 0;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+textarea {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    margin: 0.35rem 0 1rem;
+    border: 1px solid #c8d0d5;
+    border-radius: 0.3rem;
+    font: inherit;
+}
+
+textarea {
+    min-height: 7rem;
+    resize: vertical;
+}
+
+button[type="submit"] {
+    padding: 0.75rem 1.25rem;
+    border: 0;
+    border-radius: 0.3rem;
+    color: white;
+    background: #04aa6d;
+    cursor: pointer;
+    font: inherit;
+}
+
+button[type="submit"]:hover {
+    background: #45a049;
+}
+
+.result {
+    margin: 0.5rem 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.note {
+    color: #59636b;
+}
+
+@media (max-width: 40rem) {
+    .site-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %}カクル / KAKURU{% endblock %}
+{% block content %}
+<h1>KAKURU (Kalkulator Rumus): Cara mudah menghitung cepat soal matematika</h1>
+<section class="panel">
+    <p>Orang yang terlibat:</p>
+    <ul>
+        <li>Muhammad Raihan sebagai Programmer</li>
+        <li>Azzam Putra Raihan sebagai Programmer</li>
+        <li>Hersan Ramadahan sebagai Penyusun</li>
+        <li>Reza Setiawan sebagai Penyusun</li>
+    </ul>
+    <h2>Apa Itu KAKURU?</h2>
+    <p><strong>KAKURU</strong> adalah sebuah mesin kalkulator yang berkerja layaknya kalkulator pada umumnya, hanya saja dirancang untuk mempermudah menyelesaikan masalah mengenai rumus matematika.</p>
+    <h2>Gimana cara kerjanya?</h2>
+    <p>Gampang! Cuman pilih lewat menu di atas terus tinggal satset satset deh.</p>
+</section>
+<section class="panel">
+    <h2>📬 Gak nemu rumus? Bilang aja!</h2>
+    <p>Website ini masih sepenuhnya dalam pengembangan, jika ada bug atau kesalahan, bisa kontak developer lewat form dibawah👇</p>
+    <form action="https://formsubmit.co/0e4a07a9d07e5a315c5cb8aaae8d758c" method="POST">
+        <input type="hidden" name="_captcha" value="false">
+        <label for="contact-name">Nama Kamu</label>
+        <input id="contact-name" type="text" name="name" placeholder="Nama Kamu" required>
+        <label for="contact-email">Email Kamu</label>
+        <input id="contact-email" type="email" name="email" placeholder="Email Kamu" required>
+        <label for="contact-message">Pesan</label>
+        <textarea id="contact-message" name="message" placeholder="Pesan kamu disini! (Bisa berupa saran atau error!)"></textarea>
+        <button type="submit">Send</button>
+    </form>
+</section>
+{% endblock %}
