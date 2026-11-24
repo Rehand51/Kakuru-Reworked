@@ -1,2 +1,7 @@
-/target
+/target/
+/build/
 .env
+android/local.properties
+android/key.properties
+.idea/
+*.iml
