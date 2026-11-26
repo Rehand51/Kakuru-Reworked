@@ -1,37 +1,61 @@
-# KAKURU
+### KAKURU
 
-KAKURU is a native Rust application for Windows and Android that helps with
-common mathematics calculations. Its UI is built with egui/eframe; calculations
-run locally on the device.
+KAKURU adalah aplikasi berbasis Rust untuk Windows dan Android yang bisa kamu gunakan buat berbagai perhitungan matematika sehari-hari.
 
-## Requirements
+Tampilan aplikasinya dibuat menggunakan egui/eframe, sedangkan semua perhitungan dilakukan langsung di perangkat kamu, jadi nggak perlu koneksi internet.
 
-- Rust stable toolchain
-- Windows: MinGW-w64 GCC toolchain
-- Android: Android SDK, NDK, and `cargo-apk`
+### Persyaratan
 
-Install `cargo-apk` with:
+* Rust stable
+
+* Windows: Toolchain GCC MinGW-w64
+
+* Android: Android SDK, NDK, dan `cargo-apk`
+
+Instal `cargo-apk` dengan perintah berikut:
 
 ```shell
 cargo install cargo-apk
 ```
 
-## Run and test on Windows
+### Menjalankan dan Menguji di Windows
+
+Jalankan aplikasi:
 
 ```shell
 cargo run
+```
+
+Jalankan pengujian:
+
+```shell
 cargo test
 ```
 
-## Build
+### Build Aplikasi
+
+Untuk membuat versi rilis di Windows:
 
 ```shell
 cargo build --release
+```
+
+Untuk membuat APK Android:
+
+```shell
 cargo apk build --lib
 ```
 
-The Android package metadata and supported ARM targets are configured in
-`Cargo.toml`. The feedback form opens the device's email app. Existing
-calculation formulas and the SPLDV development placeholder are retained.
-The APK command builds a development-signed package; configure a release
-keystore in `Cargo.toml` before publishing an optimized APK to an app store.
+### Catatan
+
+* Pengaturan metadata paket Android dan target ARM yang didukung sudah tersedia di `Cargo.toml`.
+
+* Formulir masukan akan membuka aplikasi email di perangkat kamu.
+
+* Rumus perhitungan yang sudah ada tetap dipertahankan.
+
+* Fitur SPLDV masih berupa placeholder untuk pengembangan selanjutnya.
+
+* APK yang dihasilkan menggunakan tanda tangan pengembangan. Kalau ingin menerbitkan aplikasi ke toko aplikasi, kamu perlu mengatur keystore rilis di `Cargo.toml` terlebih dahulu.
+
+Semua perhitungan tetap berjalan secara lokal di perangkat, jadi data perhitungan kamu nggak perlu dikirim ke server.
